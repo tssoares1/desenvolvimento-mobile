@@ -22,68 +22,64 @@ class _TelaDoisState extends State<TelaDois> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: <Widget>[
             Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Column(
-                  children: [
-                    GestureDetector(
-                      child: Image.asset(
-                        "images/papel.png",
-                        width: 100,
-                        height: 100,
-                      ),
-                    ),
-                    const Text(
-                      'Escolha do APP',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
+              children: [
+                GestureDetector(
+                  child: Image.asset(
+                    "images/papel.png",
+                    width: 100,
+                    height: 100,
+                  ),
                 ),
-                Column(
-                  children: [
-                    GestureDetector(
-                      child: Image.asset(
-                        "images/pedra.png",
-                        width: 100,
-                        height: 100,
-                      ),
-                    ),
-                    const Text(
-                      'Sua escolha',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    GestureDetector(
-                      child: Image.asset(
-                        "images/icons8-perder-48.png",
-                        width: 100,
-                        height: 100,
-                      ),
-                    ),
-                    const Text(
-                      'Você Perdeu/Venceu',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
+                const Text(
+                  'Escolha do APP',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ],
             ),
-            ElevatedButton(onPressed: () => {}, child: Text("Jogar novamente")),
+            Column(
+              children: [
+                GestureDetector(
+                  child: Image.asset(
+                    "images/pedra.png",
+                    width: 100,
+                    height: 100,
+                  ),
+                ),
+                const Text(
+                  'Sua escolha',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                GestureDetector(
+                  child: Image.asset(
+                    "images/icons8-perder-48.png",
+                    width: 100,
+                    height: 100,
+                  ),
+                ),
+                const Text(
+                  'Você Perdeu/Venceu',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+              ],
+            ),
+            ElevatedButton(
+              onPressed: () => {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(6), // bordas arredondadas
+                ),
+                textStyle: TextStyle(fontSize: 20),
+              ),
+              child: Text("Jogar novamente"),
+            ),
           ],
         ),
       ),
